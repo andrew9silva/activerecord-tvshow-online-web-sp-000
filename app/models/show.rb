@@ -1,7 +1,7 @@
 class Show < ActiveRecord::Base
-  def highest_rating
+  def Show::highest_rating
 
-    Movie.order(rating: :desc).first
+    Show.maximum('rating')
 
   end
 end
